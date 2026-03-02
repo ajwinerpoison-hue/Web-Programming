@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" integrity="sha512-3pIirOrwegjM6erE5gPSwkUzO+3cTjpnV9lexlNZqvupR64iZBnOOTiiLPb9M36zpMScbmUNIcHUqKD47M719g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+/*
+	this is my first Javascript example
+*/
+function sayHello(){
+	alert("hello");
+    toastr[info]()
+}
+function checkForm(){
+    var pwd = document.getElementById('Password').value;
+    if (pwd.length < 8){
+        alert('Passeord must be at least 8 characters');
+        pwd.focus();
+        return false;
+    }
+}
+</script>
+</head>
+
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<form onSubmit="return checkForm()">
+    First Name <br>
+    <input type="text" id="firstName" value=""><br><br>
+    Last Name <br>
+    <input type="text" id="lastName" value=""><br><br>
+    Password<br>
+    <input type="password" id="Password" value=""><br><br>
+    <input type="submit">
+
+
+</form>
+
+<p id="demo">JavaScript can change HTML content.</p>
+
+<p id="hello"> </p>
+<button type="button" onclick='sayHello()'>Click Me!</button>
+
+<script>
+document.getElementById("demo").innerHTML = "JavaScript rules!";
+document.getElementById("hello").innerHTML = "Hello Allen";
+</script>
+
+
+</body>
+</html>
